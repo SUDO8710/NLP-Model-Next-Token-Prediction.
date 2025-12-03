@@ -1,0 +1,145 @@
+{
+  "team_info": {
+    "team_name": "Invincibles",
+    "members": [
+      {
+        "name": "Suryashis Nandi",
+        "email": "suryashis_m250534cs@nitc.ac.in",
+        "student_id": "M250534CS"
+      },
+      {
+        "name": "Kaustav Mandal",
+        "email": "kaustav_m250366cs@nitc.ac.in",
+        "student_id": "M250366CS"
+      }
+    ]
+  },
+  "submission_info": {
+    "course_id": "CS6320E",
+    "assignment": "Compact Language Model Challenge",
+    "submission_date": "2025-11-28",
+    "submission_format": "git_repo/zip"
+  },
+  "model_info": {
+    "architecture": "GPT-2 based / Transformer",
+    "layers": 6,
+    "attention_heads": 8,
+    "embedding_dimension": 512,
+    "total_parameters":  {
+      "telugu": 20919296,
+      "marathi": 21434880
+    },
+    "trainable_parameters": {
+      "telugu": 20919296,
+      "marathi": 21434880
+    }
+  },
+  "training_info": {
+    "languages": ["marathi", "telugu"],
+    "training_examples": {
+      "marathi": 6900,
+      "telugu": 5500
+    },
+    "epochs": 10,
+    "batch_size": 16,
+    "learning_rate": 0.0005,
+    "optimizer": "AdamW",
+    "max_sequence_length": 256,
+    "random_seed": 42,
+    "training_time_hours": {
+      "marathi": 12.5,
+      "telugu": 9.8
+    }
+  },
+  "hardware_used": {
+    "platform": " Windows",
+    "gpu_model": "INTEL Iris XE ",
+    "gpu_memory_gb": 24,
+    "cpu_model": "Intel Xeon",
+    "ram_gb": 8,
+    "pytorch_version": "2.0.0"
+  },
+  "external_resources": {
+    "pretrained_models": [
+      {
+        "name": "gpt2 / small gpt2",
+        "source": "huggingface",
+        "license": "MIT",
+        "usage": "initialization and fine-tuning"
+      }
+    ],
+    "tokenizers": [
+      {
+        "name": "SentencePiece",
+        "vocab_size": 8000,
+        "trained_on": "provided dataset only"
+      }
+    ],
+    "libraries": [
+      {
+        "name": "transformers",
+        "version": "4.30.0",
+        "license": "Apache 2.0"
+      },
+      {
+        "name": "torch",
+        "version": "2.0.0",
+        "license": "BSD"
+      },
+      {
+        "name": "tokenizers",
+        "version": "0.13.0",
+        "license": "Apache 2.0"
+      }
+    ],
+    "additional_data": "none (only provided training data used)",
+    "external_apis": "none"
+  },
+  "performance_metrics": {
+    "marathi": {
+      "validation_perplexity": " 5.045615273020593",
+      "validation_accuracy": "0.6281530203841023(62.82%)",
+      "cross_entropy": "1.6185196033606208",
+      "bits_per_token": " 2.33503020534994"
+    },
+    "telugu": {
+      "validation_perplexity": "5.295186462192293",
+      "validation_accuracy": " 0.618391948838549(61.84%)",
+      "cross_entropy": "1.6667981932005385",
+      "bits_per_token": "2.404681487493101"
+    }
+  },
+  "efficiency_metrics": {
+    "inference_latency_median_ms": "0.000514583",
+    "inference_latency_p95_ms": "0.00090625",
+    "throughput_tokens_per_second": "1947.32",
+    "model_size_mb": {
+      "marathi": 82,
+      "telugu": 84
+    }
+    
+  },
+  "reproducibility": {
+    "random_seeds": {
+      "python": 42,
+      "numpy": 42,
+      "torch": 42
+    },
+    "deterministic_mode": true,
+    "code_repository": "git_url_or_zip_file_name",
+    
+    "conda_environment": "requirements.txt provided"
+  },
+  "ethical_considerations": {
+    "potential_biases": "Telugu and Marathi models trained on news data may reflect biases present in source material",
+    "limitations": "Limited training data may result in poor generalization",
+    "intended_use": "Educational purposes, research, next-token prediction",
+    "misuse_risks": "Should not be used for generating misleading content or impersonating specific writing styles"
+  },
+  "contact_information": {
+    "primary_contact": {
+      "name": "Suryashis Nandi",
+      "email": "suryashis.nandi@gmail.com"
+    }
+  }
+}
