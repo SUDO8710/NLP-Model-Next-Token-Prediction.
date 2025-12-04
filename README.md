@@ -122,7 +122,7 @@ python train_small_gpt.py \
 | Small  | 6      | 8     | 512   | ~30M   | Balanced |
 | Medium | 8      | 12    | 768   | ~80M   | Best performance |
 
-### 5. Evaluate Model
+### 5. Evaluating Model
 
 ```bash
 # Evaluate on validation set
